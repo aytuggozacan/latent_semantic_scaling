@@ -8,10 +8,6 @@ library(patchwork)
 library(ggpubr)
 
 ################################################################################
-#Set Working Directory
-
-setwd("~/Desktop/R Code")
-################################################################################
 #Data Sources
 
 data <- fread("data/category_I.csv")
