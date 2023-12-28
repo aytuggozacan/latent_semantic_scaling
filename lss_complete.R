@@ -61,26 +61,6 @@ econI_graph <- ggplot(dat_econI, aes(date)) +
   geom_line( data = dat_smooth_econI, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_I - Economic sentiment") +
   theme_classic()
 ################################################################################
@@ -103,26 +83,6 @@ eduI_graph <- ggplot(dat_eduI, aes(date)) +
   geom_line( data = dat_smooth_eduI, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_I - Education Sentiment") +
   theme_classic()
 
@@ -146,26 +106,6 @@ socI_graph <- ggplot(dat_socI, aes(date)) +
   geom_line( data = dat_smooth_socI, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_I - Social Sentiment") + 
   theme_classic()
 
@@ -189,35 +129,11 @@ workI_graph <- ggplot(dat_workI, aes(date)) +
   geom_line( data = dat_smooth_workI, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_I - Work Sentiment") +  
   theme_classic()
 
 ################################################################################
 #Graph CatI
-
-(bluecard_graph + emigration_graph +
-  econI_graph + eduI_graph + socI_graph + workI_graph) +
-  plot_layout(guides = "collect", ncol = 2) & theme(legend.position = 'bottom')
 
 (econI_graph + eduI_graph + socI_graph + workI_graph) + 
   plot_layout(guides = "collect", ncol = 2) & theme(legend.position = 'bottom')
@@ -265,26 +181,6 @@ econII_graph <- ggplot(dat_econII, aes(date)) +
   geom_line( data = dat_smooth_econII, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_II - Economic sentiment") +  
   theme_classic()
 
@@ -308,26 +204,6 @@ eduII_graph <- ggplot(dat_eduII, aes(date)) +
   geom_line( data = dat_smooth_eduII, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_II - Education Sentiment") +  
   theme_classic() 
 
@@ -351,26 +227,6 @@ socII_graph <- ggplot(dat_socII, aes(date)) +
   geom_line( data = dat_smooth_socII, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_II - Social Sentiment") +  
   theme_classic()
 
@@ -394,36 +250,11 @@ workII_graph <- ggplot(dat_workII, aes(date)) +
   geom_line( data = dat_smooth_workII, aes(y = fit), col = "darkred") +
   ylim(c(-0.4,0.4)) + 
   geom_hline(yintercept = 0) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-15")), 
-                 color = "Coup Attempt"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2016-07-20")), 
-                 color = "State of Emergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-01-19")), 
-                 color = "Economic Crisis")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-07-18")),
-                 color = "State o fEmergency")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2018-06-24")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2023-05-28")), 
-                 color = "Election"), linetype = "dashed") +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2020-03-11")), 
-                 color = "Pandemic")) +
-  geom_vline(aes(xintercept = as.numeric(as.Date("2022-03-03")), 
-                 color = "Pandemic")) +
-  scale_color_manual(name = "Breakpoints", 
-                     values = c('Coup Attempt' = "red", 'State of Emergency' = "darkolivegreen", 
-                                Election = "darkorange2", Pandemic = "darkorchid",
-                                'Economic Crisis' = "deepskyblue4")) +
   labs(x = "Time", y = "Cat_II - Work Sentiment") +  
   theme_classic()
 
 ################################################################################
 #Graph CatII
-
-(bluecard_graph + emigration_graph +
-   econII_graph + eduII_graph + socII_graph + workII_graph) +
-  plot_layout(guides = "collect", ncol = 2) & theme(legend.position = 'bottom')
-
 (econII_graph + eduII_graph + socII_graph + workII_graph) + 
   plot_layout(guides = "collect", ncol = 2) & theme(legend.position = 'bottom')
 
