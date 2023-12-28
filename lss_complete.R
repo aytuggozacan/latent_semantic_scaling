@@ -23,30 +23,6 @@ dataII <- dataII %>% filter(Date > '2014-12-31')
 lexicon <- fread("data/lexicon_tr.csv")
 lexicon <- lexicon[, POLARITY := NULL]
 
-bluecard_data <- fread("data/Bluecard.csv")
-bluecard_data <- bluecard_data %>% filter(Year > 2014)
-
-emigration_data <- fread("data/emig3.csv")
-emigration_data <- emigration_data[Age == "Total"]
-
-
-
-################################################################################
-#Migration Graphs
-
-bluecard_graph <- ggplot(bluecard_data, aes(Year, Bluecard)) +
-  geom_line(col = "darkblue") +
-  labs(x = "Time", y = "Bluecard Grants") +  
-  theme_classic() + 
-  ylim(0, 1800)
-
- emigration_graph <- ggplot(emigration_data, aes(Date, Percent)) +
-  geom_line(col = "darkblue", aes(group = 1)) +
-  labs(x = "Time", y = "% of Emigrant") +  
-  theme_classic()
- 
- bluecard_graph + emigration_graph
-
 ################################################################################
 #LSS model common part - CatI
 
